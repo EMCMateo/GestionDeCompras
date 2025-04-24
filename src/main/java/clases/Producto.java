@@ -51,7 +51,7 @@ public abstract class Producto {
     public String toString(){
 
         return "Codigo: " + codigo +
-                "\nProducto: " + nombre +
+                "\nProducto:" + nombre +
                 "\nPrecio Unitario: " + precioU +
                 "\nTipo: " + tipoProducto;
     }
