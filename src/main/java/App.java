@@ -1,5 +1,8 @@
+import clases.Articulo;
+import enums.TipoProducto;
+import java.util.Scanner;
 public class App {
-    public void main(String [] args){
+    public static void main(String [] args){
 
         Scanner leer = new Scanner(System.in);
         Articulo articulo = new Articulo("123456789","<NAME>",1000,TipoProducto.Alimento,10);
@@ -20,7 +23,7 @@ public class App {
                             "12. Salir\n" +
                             "Seleccione una opción:");
         int opcion = leer.nextInt();
-        int cont =10;
+        int cont = 10;
         while(cont != 0)
             switch (opcion){
                 case 1:
