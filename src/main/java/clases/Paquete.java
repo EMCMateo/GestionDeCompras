@@ -17,11 +17,13 @@ public class Paquete extends Producto{
         this.peso = peso;
     }
 
+
     @Override
-    float calcularCosto(){
-        float costo = this.peso*getPrecioU();
+    float calcularCosto() {
+        float costo = getPeso() * getPrecioU();
         return costo;
     }
+
     @Override
     public String toString(){
         return super.toString() +
