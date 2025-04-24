@@ -21,6 +21,7 @@ public abstract class Producto {
         this.nombre = nombre;
     }
 
+
     public float getPrecioU() {
         return precioU;
     }
