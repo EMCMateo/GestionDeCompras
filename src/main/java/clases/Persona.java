@@ -3,12 +3,12 @@ package clases;
 public class Persona {
     private String nombre;
     private String email;
-    private int codigo;
+    private String cedula;
 
-    public Persona(String nombre, String email, int codigo) {
+    public Persona(String nombre, String email, String cedula) {
         this.nombre = nombre;
         this.email = email;
-        this.codigo = codigo;
+        this.cedula = cedula;
     }
 
     public Persona() {
@@ -30,14 +30,17 @@ public class Persona {
         this.email = email;
     }
 
-    public int getCodigo() {
-        return codigo;
+    public String getCedula() {
+        return cedula;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
     public String toString(){
-        return "";
+        return "Persona: \n" +
+                " Nombre: "+nombre+
+                "\n Cedula: "+cedula+
+                "\n Email: "+email;
     }
 }

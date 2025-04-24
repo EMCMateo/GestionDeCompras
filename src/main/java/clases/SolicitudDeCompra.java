@@ -1,25 +1,43 @@
 package clases;
 
 import enums.EstadoSolicitud;
-import java.util.List;
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 public class SolicitudDeCompra {
     private int idSolicitud;
-    private EstadoSolicitud tipoSolicitud;
+    private EstadoSolicitud estadoSolicitud;
     private GregorianCalendar fechaSolicitud;
-    private Departamento departamento;
-    private List <Producto> producto;
+    private Empleado solicitante;
+    private List<DetalleCompra> detalleCompras;
 
     public SolicitudDeCompra() {
+        this.detalleCompras = new ArrayList<>();
     }
 
-    public SolicitudDeCompra(int idSolicitud, EstadoSolicitud tipoSolicitud, GregorianCalendar fechaSolicitud, Departamento departamento, List<Producto> producto) {
+    public SolicitudDeCompra(int idSolicitud, EstadoSolicitud estadoSolicitud, GregorianCalendar fechaSolicitud, Empleado solicitante, List<DetalleCompra> detalleCompras) {
         this.idSolicitud = idSolicitud;
-        this.tipoSolicitud = tipoSolicitud;
+        this.estadoSolicitud = estadoSolicitud;
         this.fechaSolicitud = fechaSolicitud;
-        this.departamento = departamento;
-        this.producto = producto;
+        this.solicitante = solicitante;
+        this.detalleCompras = detalleCompras;
+    }
+
+    public int getIdSolicitud() {
+        return idSolicitud;
+    }
+
+    public void setIdSolicitud(int idSolicitud) {
+        this.idSolicitud = idSolicitud;
+    }
+
+    public EstadoSolicitud getEstadoSolicitud() {
+        return estadoSolicitud;
+    }
+
+    public void setEstadoSolicitud(EstadoSolicitud estadoSolicitud) {
+        this.estadoSolicitud = estadoSolicitud;
     }
 
     public GregorianCalendar getFechaSolicitud() {
@@ -30,21 +48,22 @@ public class SolicitudDeCompra {
         this.fechaSolicitud = fechaSolicitud;
     }
 
-    public EstadoSolicitud getTipoSolicitud() {
-        return tipoSolicitud;
+    public Empleado getSolicitante() {
+        return solicitante;
     }
 
-    public void setTipoSolicitud(EstadoSolicitud tipoSolicitud) {
-        this.tipoSolicitud = tipoSolicitud;
+    public void setSolicitante(Empleado solicitante) {
+        this.solicitante = solicitante;
     }
 
-    public int getIdSolicitud() {
-        return idSolicitud;
+    public void addDetalleCompra(DetalleCompra detalleCompra) {
+        this.detalleCompras.add(detalleCompra);
     }
 
-    public void setIdSolicitud(int idSolicitud) {
-        this.idSolicitud = idSolicitud;
+    public List<DetalleCompra> getDetalleCompras() {
+        return detalleCompras;
     }
+
 
     @Override
 
